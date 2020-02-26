@@ -2,6 +2,11 @@ html {
   font-size: 16px;
 }
 
+@font-face {
+  font-family: zurich;
+  src: url(ZurichBT-Roman.ttf);
+}
+
 .flex {
   display: flex;
 }
@@ -18,7 +23,7 @@ html {
 }
 
 body {
-  font-family: proxima-nova, sans-serif;
+  font-family: zurich, sans-serif;
   margin: auto;
   height: auto;
   width: 100%;
@@ -44,7 +49,6 @@ body {
   width: 100%;
   flex-direction: column;
   box-sizing: border-box;
-  padding-bottom: 40px;
   height: 100%;
   position: fixed;
   background-color: #041C40;
@@ -64,6 +68,8 @@ body {
   align-items: center;
   text-align: center;
   align-self: center;
+  height: 100%;
+  justify-content: center;
 }
 
 .main-right {
@@ -124,14 +130,40 @@ h2 {
 
 .email {
   align-items: center;
+  margin-bottom: 20%;
+}
+
+#topim {
+  opacity: 0;
+}
+
+#contact {
+  opacity: 0;
 }
 
 
 
-}
-
-@media only screen and (max-width: 720px) {
-  .main-right {
-    visibility: hidden;
+@media only screen and (max-width: 450px) {
+  .contact {
+    display: none;
   }
+
+  .email {
+    margin-top: 80px;
+    margin-bottom: 0px;
+  }
+
+  .logo > img {
+    margin: 60px 0 20px 0;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 36px;
+    color: #fff;
+    letter-spacing: 0.4rem;
+    margin: 0;
+    font-weight: 500;
+  }
+
 }
